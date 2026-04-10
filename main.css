@@ -298,7 +298,7 @@
   /* Keep "dan Nadia" on the same line */
   .and-line {
     display: inline-flex;
-    align-items: baseline;
+    align-items: flex-start;
     gap: 12px;
   }
 
@@ -314,13 +314,13 @@
   }
   
   .and {
-    font-family: var(--font-reg);
+    font-family: var(--font-cursive);
     font-size: clamp(13px, 3.5vw, 16px);
     font-style: normal;
     color: var(--color-text-mid);
     letter-spacing: 0.18em;
     text-transform: lowercase;
-    margin: 6px 0 4px 4px;
+    margin: 0;
     line-height: 1.2;
     display: block;
   }
