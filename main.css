@@ -769,6 +769,8 @@
   
   .bottom-nav img {
     display: block;
+    width: 28px;
+    height: 28px;
   }
   
   
