@@ -28,18 +28,18 @@
    ============================================================ */
 :root {
   /* --- Colours --- */
-  --color-gold:          #8B4513;
-  --color-gold-border:   #8B4513;
+  --color-gold:          #C9A961;
+  --color-gold-border:   #C9A961;
 
-  --color-text-dark:     #4A3728;
-  --color-text-mid:      #6B5344;
+  --color-text-dark:     #5C4A3D;
+  --color-text-mid:      #7D6353;
   --color-text-light:    #ffffff;
-  --color-text-muted:    #8B7355;
+  --color-text-muted:    #A69076;
 
   /* Plain-bg.svg base: #faf7f4 / #ffffff */
   --color-bg-page:       #faf7f4;
   --color-bg-card:       #faf7f4;
-  --color-bg-ucapan:     #8B4513;
+  --color-bg-ucapan:     #C9A961;
   --color-bg-popup:      rgba(255, 255, 255, 0.9);
   --color-bg-navbar:     rgba(250, 247, 244, 0.94);
   --color-bg-reveal:     #faf7f4;
@@ -48,8 +48,8 @@
   /* Glass on pattern-bg (aturcara + doa) — slightly warmer & more opaque */
   --color-bg-card-glass-pattern: rgba(255, 252, 248, 0.93);
 
-  --color-hover:         #E8D5C4;
-  --color-input-border:  #D2B48C;
+  --color-hover:         #F5EBE0;
+  --color-input-border:  #D4C4B0;
 
   /* --- Typography --- */
   --font-display:   'EB Garamond', serif;
