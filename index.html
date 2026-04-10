@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ms">
+<!--
+  index.html — Walimatulurus Yusuf & Nadia
+  
+  TABLE OF CONTENTS
+  -----------------
+  HEAD
+    - Meta & Title
+    - Stylesheets
+    - Scripts
+
+  BODY
+    1. Page Wrapper
+       1a. Welcome Section
+       1b. Invitation Section
+       1c. Location Section
+       1d. Aturcara & Doa Section
+       1e. Ucapan Section
+           - Bottom Nav
+           - Popups (Calendar, Call, Song, Location, RSVP, Attend, Wish)
+    2. Background Audio
+    3. Reveal Overlay
+-->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Social sharing preview (WhatsApp, etc.) -->
+  <meta name="description" content="Jemputan ke majlis Walimatulurus Mohamad Yusuf & Nadia Madihah, 20 Jun 2026, Dewan Sri Endon Putrajaya." />
+  <meta property="og:title"       content="Walimatulurus — Yusuf & Nadia" />
+  <meta property="og:description" content="Sabtu, 20 Jun 2026 · 11:00 pagi · Dewan Sri Endon, Putrajaya" />
+
+  <title>Walimatulurus</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet (includes .fade-in — inline <style> block removed) -->
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body class="no-scroll">
+
+  <div class="page-wrapper">
+    <div class="card-container">
+
+
+      <!-- =====================================================
+           1a. WELCOME SECTION
+           ===================================================== -->
+      <section id="main" class="welcome-section">
+        <div class="content fade-in">
+
+          <p class="monogram">Y &nbsp;&nbsp; N</p>
+
+          <img
+            src="assets/background/walimatulurus (2).png"
+            alt=""
+            aria-hidden="true"
+            class="walimatulurus"
+          />
+
+          <p class="title">WALIMATULURUS</p>
+
+          <div class="names">
+            <span class="name">Yusuf</span>
+            <span class="and">and</span>
+            <span class="name">Nadia</span>
+          </div>
+
+          <p class="date">20 JUN &nbsp;|&nbsp; 11:00 PAGI</p>
+          <p class="date">DEWAN SRI ENDON,</p>
+          <p class="date">PUTRAJAYA</p>
+
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           1b. INVITATION SECTION
+           ===================================================== -->
+      <section id="invitation" class="invite-section">
+        <div class="invitation-content fade-in">
+
+          <div class="bismillah-container">
+            <div class="bismillah">بِسْمِ اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</div>
+          </div>
+
+          <p class="salam">ASSALAMUALAIKUM<br />&amp;<br />SELAMAT SEJAHTERA</p>
+
+          <p class="parents">
+            Hj. Mohamed Ghous Bin Ahmad<br />&amp;<br />Hjh. Mafusah Binti Md Ismail
+          </p>
+
+          <p class="invitation-text">
+            Dengan penuh kesyukuran, mempersilakan<br />
+            YBhg Tan Sri/<br />
+            Dato'/Datin/Tuan/Puan/Encik/Cik hadir ke<br />
+            majlis perkahwinan anakanda kami
+          </p>
+
+          <div class="bride-groom">
+            <p class="groom-name">Mohamad Yusuf Bin Mohamed Ghous</p>
+            <p class="couple-connector">dan pasangannya</p>
+            <p class="bride-name">Nadia Madihah Binti Lokman</p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           1c. LOCATION SECTION
+           ===================================================== -->
+      <section id="location" class="location-section">
+
+        <div class="location-item fade-in">
+          <div class="location-label">TEMPAT</div>
+          <div class="location-detail">Dewan Sri Endon, Putrajaya</div>
+          <div class="popup-buttons">
+            <a href="https://maps.app.goo.gl/xXbUs8uJfViZSAWf9"
+               target="_blank" rel="noopener"
+               class="popup-button">
+              Google Maps
+            </a>
+            <a href="https://ul.waze.com/ul?place=ChIJvWxEVhK2zTERTXjYe3kdmac&ll=2.94267460%2C101.68737340&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+               target="_blank" rel="noopener"
+               class="popup-button">
+              Waze
+            </a>
+          </div>
+        </div>
+
+        <div class="location-item fade-in">
+          <div class="location-label">TARIKH</div>
+          <div class="location-detail">Sabtu, 20 Jun 2026</div>
+        </div>
+
+        <div class="location-item fade-in">
+          <div class="location-label">WAKTU</div>
+          <div class="location-detail">11:00 pagi - 5:00 petang</div>
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           1d. ATURCARA & DOA SECTION
+           ===================================================== -->
+      <section id="atur-cara-quotes" class="aturcara-section">
+
+        <div class="aturcara-container fade-in">
+          <div class="aturcara-card">
+            <h3 class="aturcara-title">ATUR CARA MAJLIS</h3>
+
+            <div class="aturcara-item">
+              <div class="aturcara-event">Majlis Bermula</div>
+              <div class="aturcara-time">11:00 pagi</div>
+            </div>
+
+            <div class="aturcara-item">
+              <div class="aturcara-event">Ketibaan Pengantin</div>
+              <div class="aturcara-time">12:30 tengah hari</div>
+            </div>
+
+            <div class="aturcara-item">
+              <div class="aturcara-event">Majlis Berakhir</div>
+              <div class="aturcara-time">05:00 petang</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quotes-container fade-in">
+          <div class="quotes-card">
+            <p class="quotes-text">Ya Allah Ya Rahman Ya Rahim, berkatilah majlis perkahwinan ini.</p>
+            <p class="quotes-text">Limpahkanlah baraqah dan rahmatMu kepada kedua mempelai ini. Kurniakanlah mereka kelak zuriat yang soleh dan solehah. Kekalkanlah jodoh mereka hingga ke jannah.</p>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           1e. UCAPAN SECTION
+           ===================================================== -->
+      <section id="ucapan" class="ucapan-sections">
+
+        <div class="ucapan-card fade-in">
+          <h2 class="ucapan-heading">UCAPAN</h2>
+          <div class="ucapan-list-container">
+            <div id="ucapanList"></div>
+          </div>
+        </div>
+
+        <div class="ucapan-buttons fade-in">
+          <button class="ucapan-button" id="btnSah">Sahkan Kehadiran</button>
+          <button class="ucapan-button" id="btnUcap">Tulis Ucapan</button>
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           BOTTOM NAV
+           ===================================================== -->
+      <nav class="bottom-nav" aria-label="Menu utama">
+        <button class="popup-trigger" data-popup="calendarPopup" aria-label="Buka kalendar">
+          <img src="assets/icons/Calendar.png" alt="" aria-hidden="true" loading="lazy" />
+        </button>
+        <button class="popup-trigger" data-popup="callPopup" aria-label="Hubungi kami">
+          <img src="assets/icons/Call.png" alt="" aria-hidden="true" loading="lazy" />
+        </button>
+        <button class="popup-trigger" data-popup="songPopup" aria-label="Lagu majlis">
+          <img src="assets/icons/Song.png" alt="" aria-hidden="true" loading="lazy" />
+        </button>
+        <button class="popup-trigger" data-popup="locationPopup" aria-label="Lokasi majlis">
+          <img src="assets/icons/Location.png" alt="" aria-hidden="true" loading="lazy" />
+        </button>
+        <button class="popup-trigger" data-popup="rsvpPopup" aria-label="RSVP dan ucapan">
+          <img src="assets/icons/RSVP.png" alt="" aria-hidden="true" loading="lazy" />
+        </button>
+      </nav>
+
+
+      <!-- =====================================================
+           POPUPS
+           ===================================================== -->
+
+      <!-- Calendar -->
+      <div class="popup-card" id="calendarPopup" role="dialog" aria-label="Tarikh majlis">
+        <div class="popup-content">
+          <h3>20 JUN 2026</h3>
+          <p>Sabtu</p>
+          <p>11:00 pagi - 05:00 petang</p>
+        </div>
+        <button class="close-btn" aria-label="Tutup">&times;</button>
+      </div>
+
+      <!-- Call (contacts currently hidden — uncomment entries to re-enable) -->
+      <div class="popup-card" id="callPopup" role="dialog" aria-label="Hubungi kami">
+        <div class="popup-content">
+          <h3>HUBUNGI KAMI</h3>
+          <!--
+          <div class="contact-entry">
+            <span class="contact-name">Mafuzah</span>
+            <div class="contact-icons">
+              <a href="https://wa.me/6019318850" target="_blank" rel="noopener" aria-label="WhatsApp Mafuzah">
+                <img src="assets/icons/Whatsapp.png" alt="WhatsApp" loading="lazy" />
+              </a>
+              <a href="tel:+6019318850" target="_blank" rel="noopener" aria-label="Telefon Mafuzah">
+                <img src="assets/icons/Phone.png" alt="Telefon" loading="lazy" />
+              </a>
+            </div>
+          </div>
+          <div class="contact-entry">
+            <span class="contact-name">Mohamad Idris</span>
+            <div class="contact-icons">
+              <a href="https://wa.me/60176492316" target="_blank" rel="noopener" aria-label="WhatsApp Mohamad Idris">
+                <img src="assets/icons/Whatsapp.png" alt="WhatsApp" loading="lazy" />
+              </a>
+              <a href="tel:+60176492316" target="_blank" rel="noopener" aria-label="Telefon Mohamad Idris">
+                <img src="assets/icons/Phone.png" alt="Telefon" loading="lazy" />
+              </a>
+            </div>
+          </div>
+          <div class="contact-entry">
+            <span class="contact-name">Mohamad Adam</span>
+            <div class="contact-icons">
+              <a href="https://wa.me/60174497626" target="_blank" rel="noopener" aria-label="WhatsApp Mohamad Adam">
+                <img src="assets/icons/Whatsapp.png" alt="WhatsApp" loading="lazy" />
+              </a>
+              <a href="tel:+60174497626" target="_blank" rel="noopener" aria-label="Telefon Mohamad Adam">
+                <img src="assets/icons/Phone.png" alt="Telefon" loading="lazy" />
+              </a>
+            </div>
+          </div>
+          <div class="contact-entry">
+            <span class="contact-name">Mohamad Yusuf</span>
+            <div class="contact-icons">
+              <a href="https://wa.me/60172625730" target="_blank" rel="noopener" aria-label="WhatsApp Mohamad Yusuf">
+                <img src="assets/icons/Whatsapp.png" alt="WhatsApp" loading="lazy" />
+              </a>
+              <a href="tel:+60172625730" target="_blank" rel="noopener" aria-label="Telefon Mohamad Yusuf">
+                <img src="assets/icons/Phone.png" alt="Telefon" loading="lazy" />
+              </a>
+            </div>
+          </div>
+          <div class="contact-entry">
+            <span class="contact-name">Nur Hawa</span>
+            <div class="contact-icons">
+              <a href="https://wa.me/60126344171" target="_blank" rel="noopener" aria-label="WhatsApp Nur Hawa">
+                <img src="assets/icons/Whatsapp.png" alt="WhatsApp" loading="lazy" />
+              </a>
+              <a href="tel:+60126344171" target="_blank" rel="noopener" aria-label="Telefon Nur Hawa">
+                <img src="assets/icons/Phone.png" alt="Telefon" loading="lazy" />
+              </a>
+            </div>
+          </div>
+          -->
+        </div>
+        <button class="close-btn" aria-label="Tutup">&times;</button>
+      </div>
+
+      <!-- Song -->
+      <div class="popup-card" id="songPopup" role="dialog" aria-label="Lagu majlis">
+        <div class="popup-content">
+          <h3>LAGU</h3>
+          <div class="youtube-embed">
+            <iframe
+              title="Lagu tema majlis"
+              width="100%"
+              height="300"
+              src="https://www.youtube.com/embed/2OnARyBIVSY?si=tneCJJyINq2c9ush&amp;controls=0"
+              style="border: none;"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <button class="close-btn" aria-label="Tutup">&times;</button>
+      </div>
+
+      <!-- Location -->
+      <div class="popup-card" id="locationPopup" role="dialog" aria-label="Lokasi majlis">
+        <div class="popup-content">
+          <h3>LOKASI</h3>
+          <p>Dewan Sri Endon Putrajaya</p>
+          <p>Putrajaya</p>
+          <div class="popup-buttons">
+            <a href="https://maps.app.goo.gl/xXbUs8uJfViZSAWf9"
+               target="_blank" rel="noopener"
+               class="popup-button">
+              Google Maps
+            </a>
+            <a href="https://ul.waze.com/ul?place=ChIJvWxEVhK2zTERTXjYe3kdmac&ll=2.94267460%2C101.68737340&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+               target="_blank" rel="noopener"
+               class="popup-button">
+              Waze
+            </a>
+          </div>
+        </div>
+        <button class="close-btn" aria-label="Tutup">&times;</button>
+      </div>
+
+      <!-- RSVP — main hub -->
+      <div class="popup-card" id="rsvpPopup" role="dialog" aria-label="RSVP dan ucapan">
+        <div class="popup-content">
+          <h3>RSVP &amp; UCAPAN</h3>
+          <button class="popup-button" id="openAttendForm">Sahkan Kehadiran</button>
+          <button class="popup-button" id="openWishForm">Berikan Ucapan</button>
+        </div>
+        <button class="close-btn" aria-label="Tutup">&times;</button>
+      </div>
+
+      <!-- Attendance form -->
+      <div class="popup-card" id="attendPopup" role="dialog" aria-label="Sahkan kehadiran">
+        <div class="popup-content">
+          <h3>SAHKAN KEHADIRAN</h3>
+          <form id="attendForm" class="rsvp-form">
+
+            <label for="attendName">Nama</label>
+            <input type="text" id="attendName" name="attendName"
+                   placeholder="Nama Anda" required />
+
+            <label for="attendOption">Kehadiran</label>
+            <select id="attendOption" name="attendOption" required>
+              <option value="">-- Pilih Kehadiran --</option>
+              <option value="Hadir">Hadir</option>
+              <option value="Tidak Hadir">Tidak Hadir</option>
+            </select>
+
+            <label for="attendPax">Bilangan Tetamu</label>
+            <select id="attendPax" name="attendPax" required>
+              <option value="">-- Pilih Bilangan --</option>
+              <!-- Options populated by main.js -->
+            </select>
+
+            <div class="form-buttons">
+              <button type="submit">Hantar</button>
+              <button type="button" class="cancel-btn">Batal</button>
+            </div>
+
+          </form>
+        </div>
+        <button class="close-btn" aria-label="Tutup">&times;</button>
+      </div>
+
+      <!-- Wish form -->
+      <div class="popup-card" id="wishPopup" role="dialog" aria-label="Berikan ucapan">
+        <div class="popup-content">
+          <h3>BERIKAN UCAPAN</h3>
+          <form id="wishForm" class="rsvp-form">
+
+            <label for="wishName">Nama</label>
+            <input type="text" id="wishName" name="wishName"
+                   placeholder="Nama Anda" required />
+
+            <label for="wishText">Ucapan</label>
+            <textarea id="wishText" name="wishText"
+                      rows="4" placeholder="Tulis ucapan anda..." required></textarea>
+
+            <div class="form-buttons">
+              <button type="submit">Hantar</button>
+              <button type="button" class="cancel-btn">Batal</button>
+            </div>
+
+          </form>
+        </div>
+        <button class="close-btn" aria-label="Tutup">&times;</button>
+      </div>
+
+    </div><!-- /.card-container -->
+  </div><!-- /.page-wrapper -->
+
+
+  <!-- =====================================================
+       2. BACKGROUND AUDIO
+       ===================================================== -->
+  <audio
+    id="bgMusic"
+    src="assets/song/Taylor Swift - Love Story (Piano Cover by Riyandi Kusuma).mp3"
+    preload="auto"
+    loop>
+  </audio>
+
+
+  <!-- =====================================================
+       3. REVEAL OVERLAY (door animation)
+       ===================================================== -->
+  <div class="reveal-overlay">
+    <div class="reveal-doors-wrapper">
+      <div class="reveal-left"></div>
+      <div class="reveal-right"></div>
+    </div>
+    <div class="reveal-content">
+      <div class="name-idris">Yusuf</div>
+      <div class="ampersand">&amp;</div>
+      <div class="name-aqilah">Nadia</div>
+      <button id="revealBtn" class="buka">BUKA</button>
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       SCRIPTS
+       Loaded at end of body so DOM is ready when they run.
+       Firebase compat scripts kept for analytics + firestore
+       if needed; main logic is in the ES module (main.js).
+       ===================================================== -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"       defer></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js" defer></script>
+  <script type="module" src="main.js"></script>
+
+</body>
+</html>

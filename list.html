@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSVP LIST</title>
+    <script type="module">
+      window.exportRSVP = exportRSVP;
+
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+      import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+      import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+      import { get } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"; // make sure 'get' is imported
+
+      // Your Firebase config
+      const firebaseConfig = {
+      apiKey: "AIzaSyC2uOzQQS4ntYxKd5NVsZtwaiMxH_6xB7o",
+      authDomain: "yusufnadia.firebaseapp.com",
+      databaseURL: "https://yusufnadia-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "yusufnadia",
+      storageBucket: "yusufnadia.firebasestorage.app",
+      messagingSenderId: "442575993746",
+      appId: "1:442575993746:web:7774e9a99141625ec25f4b",
+      measurementId: "G-2Z5Z2XFVMZ"
+    };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase(app);
+      const auth = getAuth(app);
+
+      const rsvpList = document.getElementById("rsvpList");
+      const wishList = document.getElementById("wishList");
+      const selector = document.getElementById("groupSelector");
+      const totalPaxDisplay = document.getElementById("totalPax");
+
+      // Load RSVP and Wishes data
+      function loadData(group) {
+        const groupRef = ref(db, `/${group}`);
+        const wishRef = ref(db, `/wishes${group}`);
+
+        rsvpList.innerHTML = "<li>Loading...</li>";
+        wishList.innerHTML = "<li>Loading...</li>";
+
+        // Load RSVP
+        onValue(groupRef, (snapshot) => {
+          const data = snapshot.val();
+          rsvpList.innerHTML = "";
+          let totalPax = 0;
+
+          if (data) {
+            Object.values(data).forEach((item) => {
+              const li = document.createElement("li");
+              li.textContent = `${item.name} - ${item.status} - ${item.pax} pax`;
+              rsvpList.appendChild(li);
+
+              if (item.status === "Hadir") {
+                const pax = parseInt(item.pax);
+                if (!isNaN(pax)) totalPax += pax;
+              }
+            });
+          } else {
+            rsvpList.innerHTML = "<li>No data found</li>";
+          }
+
+          totalPaxDisplay.textContent = totalPax;
+        });
+
+        // Load Wishes
+        onValue(wishRef, (snapshot) => {
+          const data = snapshot.val();
+          wishList.innerHTML = "";
+
+          if (data) {
+            Object.values(data).forEach((item) => {
+              const li = document.createElement("li");
+              li.textContent = `${item.name}: ${item.text}`;
+              wishList.appendChild(li);
+            });
+          } else {
+            wishList.innerHTML = "<li>No wishes found</li>";
+          }
+        });
+      }
+
+      // Auth first, then load data
+      signInAnonymously(auth)
+        .then(() => {
+          console.log("Signed in anonymously");
+          loadData("Friends"); // Default group
+        })
+        .catch((error) => {
+          console.error("Anonymous sign-in failed:", error);
+          rsvpList.innerHTML = "<li>Authentication error</li>";
+          wishList.innerHTML = "<li>Authentication error</li>";
+        });
+
+      selector.addEventListener("change", (e) => {
+        loadData(e.target.value);
+      });
+
+      function getCurrentGroup() {
+        return selector.value;
+      }
+
+      function downloadCSV(data, filename) {
+        if (!data.length) return alert("No data to export.");
+
+        const headers = Object.keys(data[0]).join(",");
+        const rows = data.map(row =>
+          Object.values(row).map(val => `"${val}"`).join(",")
+        ).join("\n");
+
+        const csvContent = headers + "\n" + rows;
+        const blob = new Blob([csvContent], { type: "text/csv" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        a.click();
+        URL.revokeObjectURL(url);
+      }
+
+      function exportRSVP() {
+        const group = getCurrentGroup();
+        const groupRef = ref(db, `/${group}`);
+
+        get(groupRef).then((snapshot) => {
+          const data = snapshot.val();
+          if (!data) return alert("No RSVP data found.");
+
+          const dataArray = Object.values(data).map(obj => ({
+            Name: obj.name || "",
+            Status: obj.status || "",
+            Pax: obj.pax || ""
+          }));
+
+
+          downloadCSV(dataArray, `${group}_RSVP.csv`);
+        }).catch((error) => {
+          console.error("Failed to fetch RSVP data:", error);
+          alert("Error exporting RSVP data.");
+        });
+      }
+      
+    </script>
+    <style>
+        body {
+        font-family: sans-serif;
+        padding: 20px;
+        background: #f4f4f4;
+        }
+        h1 {
+        text-align: center;
+        }
+        select {
+        display: block;
+        margin: 20px auto;
+        padding: 10px;
+        font-size: 16px;
+        }
+        .section {
+        background: #fff;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        ul {
+        list-style: none;
+        padding-left: 0;
+        }
+        li {
+        padding: 8px 0;
+        border-bottom: 1px solid #ddd;
+        }
+    </style>
+    </head>
+    <body>
+    <h1>RSVP LIST</h1>
+
+    <select id="groupSelector">
+        <option value="Friends">Friend</option>
+        <option value="Family">Family</option>
+    </select>
+    <div style="text-align: center; margin: 20px 0;">
+      <button onclick="exportRSVP()">Download RSVP CSV</button>
+    </div>
+
+
+    <div class="section">
+        <h2>Attendance</h2>
+        <p><strong>Total Pax:</strong> <span id="totalPax">0</span></p>
+        <ul id="rsvpList"></ul>
+      </div>
+      
+    <div class="section">
+        <h2>Wishes</h2>
+        <ul id="wishList"></ul>
+    </div>
+    </body>
+    </html>
