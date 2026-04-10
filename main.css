@@ -36,13 +36,17 @@
   --color-text-light:    #ffffff;
   --color-text-muted:    #8B7355;
 
-  --color-bg-page:       #FDF5E6;
-  --color-bg-card:       #FAF0E6;
+  /* Plain-bg.svg base: #faf7f4 / #ffffff */
+  --color-bg-page:       #faf7f4;
+  --color-bg-card:       #faf7f4;
   --color-bg-ucapan:     #8B4513;
-  --color-bg-popup:      rgba(255, 248, 220, 0.85);
-  --color-bg-navbar:     rgba(255, 248, 220, 0.90);
-  --color-bg-reveal:     #FAF0E6;
-  --color-bg-card-glass: rgba(255, 250, 240, 0.6);
+  --color-bg-popup:      rgba(255, 255, 255, 0.9);
+  --color-bg-navbar:     rgba(250, 247, 244, 0.94);
+  --color-bg-reveal:     #faf7f4;
+  /* Glass on plain sections */
+  --color-bg-card-glass: rgba(255, 255, 255, 0.88);
+  /* Glass on pattern-bg (aturcara + doa) — slightly warmer & more opaque */
+  --color-bg-card-glass-pattern: rgba(255, 252, 248, 0.93);
 
   --color-hover:         #E8D5C4;
   --color-input-border:  #D2B48C;
@@ -190,10 +194,10 @@ section {
 }
 
 /* Per-section background images */
-.welcome-section  { background-image: url('assets/background/YusufNadia Backgrouund.svg'); }
+.welcome-section  { background-image: url('assets/background/main-bg.svg'); }
 .invite-section   { background-image: url('assets/background/plain-bg.svg'); }
+.location-section { background-image: url('assets/background/plain-bg.svg'); }
 .aturcara-section { background-image: url('assets/background/pattern-bg.svg'); }
-.quotes-section   { background-image: url('assets/background/plain-bg.svg'); }
 .gambar-sections  { background-image: url('assets/background/plain-bg.svg'); background-color: var(--color-bg-card); }
 .ucapan-sections  { background-image: url('assets/background/plain-bg.svg'); background-color: var(--color-bg-card); }
 
@@ -233,7 +237,7 @@ section blockquote {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  background-image: url('assets/background/bg-mobile.svg');
+  background-image: url('assets/background/main-bg.svg');
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -428,7 +432,7 @@ section blockquote {
    7. LOCATION SECTION
    ============================================================ */
 .location-section {
-  background-color: var(--color-bg-card);
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -480,33 +484,34 @@ section blockquote {
   min-height: 760px;
 }
 
-/* Shared glass card — used by both aturcara and quotes */
+/* Shared glass card — aturcara & doa on pattern-bg */
 .aturcara-card,
 .quotes-card {
   position: relative;
   width: 315px;
   min-height: 223px;
-  background: var(--color-bg-card-glass);
-  border: 2px solid var(--color-gold);
+  background: var(--color-bg-card-glass-pattern);
+  border: 2px solid rgba(139, 69, 19, 0.45);
   border-radius: var(--radius-card);
   padding: 50px 15px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 40px rgba(74, 55, 40, 0.12);
 }
 
 .aturcara-card {
-  box-shadow: var(--shadow-inner);
+  box-shadow: var(--shadow-inner), 0 12px 40px rgba(74, 55, 40, 0.1);
 }
 
 @supports not (backdrop-filter: blur(21px)) {
   .aturcara-card,
   .quotes-card {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 252, 248, 0.97);
+    box-shadow: 0 8px 24px rgba(74, 55, 40, 0.14);
   }
 }
 
@@ -592,12 +597,12 @@ section blockquote {
 
 .ucapan-card {
   width: 100%;
-  background: var(--color-bg-popup);
+  background: var(--color-bg-card-glass);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: var(--radius-card);
-  border: 2px solid var(--color-gold);
-  box-shadow: 0 8px 32px rgba(139, 69, 19, 0.15);
+  border: 2px solid rgba(139, 69, 19, 0.35);
+  box-shadow: 0 8px 28px rgba(74, 55, 40, 0.1);
   padding: 2rem;
   text-align: center;
   display: flex;
@@ -908,7 +913,7 @@ section blockquote {
   height: 206px;
   left: calc(50% - 102.5px);
   top: 263px;
-  background: #FAF0E6;
+  background: var(--color-bg-reveal);
   border: 2px solid #8B4513;
   border-radius: 50%;
   box-shadow: 2px 4px 7.1px rgba(0, 0, 0, 0.2);
