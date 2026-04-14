@@ -27,7 +27,7 @@
    Change colours, fonts, and sizes here — they apply everywhere.
    ============================================================ */
    :root {
-    /* --- Colours — purple palette with clean minimalistic style --- */
+    /* --- Colours — purple palette with clean minimalist style --- */
     --color-gold:          #9B7EBD;   /* primary purple */
     --color-gold-border:   #C9B8E0;   /* light purple border */
 
@@ -39,10 +39,10 @@
     --color-bg-page:       #faf7f4;   /* outer page */
     --color-bg-card:       #faf7f4;   /* main card */
     --color-bg-ucapan:     #9B7EBD;   /* message bubbles — purple */
-    --color-bg-popup:      rgba(250, 248, 245, 0.92);  /* popup */
+    --color-bg-popup:      rgba(250, 248, 245, 0.82);  /* popup */
     --color-bg-navbar:     rgba(250, 247, 244, 0.88);  /* bottom nav */
     --color-bg-reveal:     #faf7f4;   /* reveal door */
-    --color-bg-card-glass: rgba(255, 255, 255, 0.75);  /* aturcara/quotes */
+    --color-bg-card-glass: rgba(250, 248, 245, 0.65);  /* aturcara/quotes */
 
     --color-hover:         #F0EBF5;   /* button hover */
     --color-input-border:  #D4C9E0;   /* form input border */
@@ -65,10 +65,10 @@
     --radius-btn:     50px;
     --radius-input:   4px;
 
-    /* --- Shadows — barely-thare --- */
+    /* --- Shadows — barely-there --- */
     --shadow-card:    0 2px 16px rgba(0, 0, 0, 0.05);
     --shadow-text:    none;
-    --shadow-popup:   0 4px 24px rgba(0, 0, 0, 0.08);
+    --shadow-popup:   0 4px 24px rgba(0, 0, 0, 0.10);
     --shadow-inner:   none;
 
     /* --- Transitions --- */
@@ -420,7 +420,7 @@
     font-size: 22px;
     color: var(--color-text-dark);
     letter-spacing: 0.12em;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     font-weight: 400;
   }
 
