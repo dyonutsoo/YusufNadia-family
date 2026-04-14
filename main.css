@@ -471,16 +471,7 @@
     font-size: 25px;
     color: var(--color-text-dark);
     letter-spacing: 0.1em;
-    margin-bottom: 0;
-  }
-
-  .groom-bin,
-  .bride-binti {
-    font-family: var(--font-serif);
-    font-size: 16px;
-    color: var(--color-text-mid);
-    margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   .couple-connector {
