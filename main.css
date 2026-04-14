@@ -27,30 +27,26 @@
    Change colours, fonts, and sizes here — they apply everywhere.
    ============================================================ */
    :root {
-    /* --- Colours --- */
-    --color-gold:          #9B7EBD;
-    --color-gold-border:   #9B7EBD;
-  
-    --color-text-dark:     #4A3F4E;
-    --color-text-mid:      #6B5D72;
-    --color-text-light:    #ffffff;
-    --color-text-muted:    #B8A9C9;
-  
-    /* Plain-bg.svg base: #faf7f4 / #ffffff */
-    --color-bg-page:       #faf7f4;
-    --color-bg-card:       #faf7f4;
-    --color-bg-ucapan:     #9B7EBD;
-    --color-bg-popup:      rgba(255, 255, 255, 0.9);
-    --color-bg-navbar:     rgba(250, 247, 244, 0.94);
-    --color-bg-reveal:     #faf7f4;
-    /* Glass on plain sections */
-    --color-bg-card-glass: rgba(255, 255, 255, 0.88);
-    /* Glass on pattern-bg (aturcara + doa) — slightly warmer & more opaque */
-    --color-bg-card-glass-pattern: rgba(255, 252, 248, 0.93);
-  
-    --color-hover:         #F0EBF5;
-    --color-input-border:  #D4C9E0;
-  
+    /* --- Colours — purple palette with clean minimalistic style --- */
+    --color-gold:          #9B7EBD;   /* primary purple */
+    --color-gold-border:   #C9B8E0;   /* light purple border */
+
+    --color-text-dark:     #4A3F4E;   /* headings, names */
+    --color-text-mid:      #6B5D72;   /* body text, labels */
+    --color-text-light:    #ffffff;   /* text on dark backgrounds */
+    --color-text-muted:    #B8A9C9;   /* connectors, subtle text */
+
+    --color-bg-page:       #faf7f4;   /* outer page */
+    --color-bg-card:       #faf7f4;   /* main card */
+    --color-bg-ucapan:     #9B7EBD;   /* message bubbles — purple */
+    --color-bg-popup:      rgba(250, 248, 245, 0.92);  /* popup */
+    --color-bg-navbar:     rgba(250, 247, 244, 0.88);  /* bottom nav */
+    --color-bg-reveal:     #faf7f4;   /* reveal door */
+    --color-bg-card-glass: rgba(255, 255, 255, 0.75);  /* aturcara/quotes */
+
+    --color-hover:         #F0EBF5;   /* button hover */
+    --color-input-border:  #D4C9E0;   /* form input border */
+
     /* --- Typography --- */
     --font-display:   'EB Garamond', serif;
     --font-serif:     'Garamond', serif;
@@ -58,23 +54,23 @@
     --font-reg:       'GothamReg', sans-serif;
     --font-script:    'Moontime', cursive;
     --font-cursive:   'CormorantGaramond', cursive;
-  
+
     /* --- Sizes --- */
     --max-width:      460px;
-    --navbar-height:  70px;
-  
-    /* --- Radii --- */
-    --radius-card:    26px;
-    --radius-popup:   15px;
-    --radius-btn:     16px;
-    --radius-input:   6px;
-  
-    /* --- Shadows --- */
-    --shadow-card:    0 10px 30px rgba(123, 94, 167, 0.12);
-    --shadow-text:    0px 4px 4px rgba(0, 0, 0, 0.34);
-    --shadow-popup:   0 8px 32px rgba(123, 94, 167, 0.2);
-    --shadow-inner:   inset 0px 0px 15px 5px rgba(139, 69, 19, 0.15);
-  
+    --navbar-height:  64px;
+
+    /* --- Radii — flatter, more refined --- */
+    --radius-card:    12px;
+    --radius-popup:   10px;
+    --radius-btn:     50px;
+    --radius-input:   4px;
+
+    /* --- Shadows — barely-thare --- */
+    --shadow-card:    0 2px 16px rgba(0, 0, 0, 0.05);
+    --shadow-text:    none;
+    --shadow-popup:   0 4px 24px rgba(0, 0, 0, 0.08);
+    --shadow-inner:   none;
+
     /* --- Transitions --- */
     --transition-fast:   0.2s ease;
     --transition-base:   0.3s ease;
@@ -82,8 +78,8 @@
     --transition-fade:   opacity 1s ease, transform 1s ease;
     --transition-door:   1.2s ease-in-out;
   }
-  
-  
+
+
   /* ============================================================
      2. CUSTOM FONTS
      ============================================================ */
@@ -93,47 +89,47 @@
     font-weight: 400;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: 'GothamBold';
     src: url('assets/fonts/GOTHAM-BOLD.TTF');
     font-weight: 700;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: 'Moontime';
     src: url('assets/fonts/FontsFree-Net-MoonTime-Regular-1.ttf');
     font-weight: 400;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: 'Garamond';
     src: url('assets/fonts/garamond_[allfont.ru].ttf');
     font-weight: 400;
     font-style: italic;
   }
-  
+
   @font-face {
     font-family: 'CormorantGaramond';
     src: url('assets/fonts/CormorantGaramond-MediumItalic.ttf');
     font-weight: 400;
     font-style: italic;
   }
-  
-  
+
+
   /* ============================================================
      3. RESET & BASE
      ============================================================ */
   html {
     box-sizing: border-box;
   }
-  
+
   *, *::before, *::after {
     box-sizing: inherit;
   }
-  
+
   body {
     margin: 0;
     padding: 0;
@@ -143,12 +139,12 @@
     display: flex;
     justify-content: center;
   }
-  
+
   body.no-scroll {
     overflow: hidden;
   }
-  
-  
+
+
   /* ============================================================
      4. LAYOUT
      ============================================================ */
@@ -162,7 +158,7 @@
     box-shadow: var(--shadow-card);
     overflow-x: hidden;
   }
-  
+
   .card-container {
     width: 100%;
     max-width: var(--max-width);
@@ -174,7 +170,7 @@
     box-shadow: var(--shadow-card);
     overflow-x: hidden;
   }
-  
+
   /* Base section styles */
   section {
     width: 100%;
@@ -192,15 +188,15 @@
     padding: 50px;
     position: relative;
   }
-  
+
   /* Per-section background images */
-  .welcome-section  { background-image: url('assets/background/main-bg.svg'); }
+  .welcome-section  { background-image: url('assets/background/YusufNadia Backgrouund.svg'); }
   .invite-section   { background-image: url('assets/background/plain-bg.svg'); }
-  .location-section { background-image: url('assets/background/plain-bg.svg'); }
   .aturcara-section { background-image: url('assets/background/pattern-bg.svg'); }
+  .quotes-section   { background-image: url('assets/background/plain-bg.svg'); }
   .gambar-sections  { background-image: url('assets/background/plain-bg.svg'); background-color: var(--color-bg-card); }
   .ucapan-sections  { background-image: url('assets/background/plain-bg.svg'); background-color: var(--color-bg-card); }
-  
+
   /* Shared section typography */
   section h2 {
     font-family: var(--font-bold);
@@ -209,7 +205,7 @@
     color: var(--color-text-dark);
     font-weight: 700;
   }
-  
+
   section p,
   section blockquote {
     font-size: 1rem;
@@ -217,7 +213,7 @@
     line-height: 1.4;
     font-weight: 400;
   }
-  
+
   section blockquote {
     font-style: italic;
     margin: 1rem auto;
@@ -227,8 +223,8 @@
     max-width: 400px;
     border-radius: 8px;
   }
-  
-  
+
+
   /* ============================================================
      5. WELCOME SECTION
      ============================================================ */
@@ -237,161 +233,110 @@
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    background-image: url('assets/background/main-bg.svg');
+    background-image: url('assets/background/bg-mobile.svg');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     position: relative;
     padding: 0;
   }
-  
+
   .welcome-section .content {
-    width: 100%;
-    text-align: left;
+    width: 72%;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0;
-    padding: 0 9% 10% 9%;
-    box-sizing: border-box;
+    padding: 0;
+    margin-top: -8%;
   }
-  
-  /* Arabic calligraphy image — top left */
+
+  /* Y / N monogram */
+  .monogram {
+    font-family: var(--font-display);
+    font-size: 18px;
+    letter-spacing: 0.45em;
+    color: var(--color-text-muted);
+    margin: 0 0 14px;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* Arabic calligraphy image */
   .walimatulurus {
     all: initial;
     display: block;
-    width: 42%;
-    max-width: 160px;
+    width: 48%;
+    max-width: 180px;
     height: auto;
-    margin: 0 0 8px 0;
+    margin: 0 auto 8px;
+    opacity: 0.85;
   }
 
   /* "WALIMATULURUS" label */
   .title {
     font-family: var(--font-reg);
     font-size: 9px;
-    letter-spacing: 0.38em;
-    color: var(--color-text-mid);
-    margin: 0 0 28px 19px;
+    letter-spacing: 0.5em;
+    color: var(--color-text-muted);
+    margin: 8px 0 24px;
     text-transform: uppercase;
-    display: block;
-    text-align: left;
   }
-  
-  /* Y / N monogram — hidden, not needed in new layout */
-  .monogram {
-    display: none;
-  }
-  
-  /* Names — big, left-aligned, stacked */
+
+  /* Names — stacked vertically, centred */
   .names {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0;
-    margin: 0 0 28px 0;
-  }
-  
-  /* Keep "dan Nadia" on the same line */
-  .and-line {
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 12px;
+    margin: 0 0 22px;
   }
 
   .name {
     font-family: var(--font-display);
-    font-size: clamp(52px, 16vw, 72px);
-    line-height: 0.95;
-    color: #7B5EA7;
+    font-size: clamp(34px, 11vw, 36px);
+    line-height: 1.05;
+    color: var(--color-text-dark);
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.2em;
     margin: 0;
     display: block;
+    font-weight: 400;
   }
-  
+
   .and {
     font-family: var(--font-cursive);
-    font-size: clamp(13px, 3.5vw, 16px);
-    font-style: normal;
-    color: var(--color-text-mid);
-    letter-spacing: 0.18em;
-    text-transform: lowercase;
-    margin: 0;
-    line-height: 1.2;
+    font-size: clamp(18px, 5vw, 20px);
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin: 4px 0;
+    line-height: 1.4;
     display: block;
   }
-  
-  /* Save the date block */
-  .save-the-date-label {
-    font-family: var(--font-reg);
-    font-size: 9px;
-    letter-spacing: 0.38em;
-    color: var(--color-text-mid);
-    text-transform: uppercase;
-    margin: 0 0 12px 0;
-    display: block;
-  }
-  
-  .date-block {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 0 0 10px 0;
-  }
-  
-  .date-day-number {
-    font-family: var(--font-display);
-    font-size: clamp(40px, 12vw, 56px);
-    line-height: 1;
-    color: var(--color-text-dark);
-    letter-spacing: -0.02em;
-  }
-  
-  .date-divider {
-    width: 1px;
-    height: 54px;
-    background: var(--color-text-mid);
-    opacity: 0.5;
-    flex-shrink: 0;
-  }
-  
-  .date-detail-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  
-  .date-detail-line {
-    font-family: var(--font-bold);
-    font-size: 11px;
-    letter-spacing: 0.22em;
-    color: var(--color-text-dark);
-    text-transform: uppercase;
-    display: block;
-  }
-  
-  /* Venue line */
-  .venue-line {
-    font-family: var(--font-reg);
-    font-size: 9px;
-    letter-spacing: 0.3em;
-    color: var(--color-text-mid);
-    text-transform: uppercase;
-    margin: 0;
-    display: block;
-    line-height: 1.8;
-  }
-  
-  /* Legacy .date — hidden in new layout */
+
+  /* Date / venue lines */
   .date {
-    display: none;
+    font-family: var(--font-display);
+    font-size: clamp(9px, 2.5vw, 12px);
+    letter-spacing: 0.35em;
+    color: var(--color-text-mid);
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 2;
+    display: block;
   }
-  
+
+  /* Add a gap between names block and date lines */
+  .names + .date {
+    margin-top: 14px;
+  }
+
+
   /* ============================================================
      6. INVITATION SECTION
      ============================================================ */
@@ -403,7 +348,7 @@
     align-items: center;
     padding-top: 50px;
   }
-  
+
   .invitation-content {
     width: 325px;
     height: 760px;
@@ -411,7 +356,7 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
   .bismillah-container {
     display: flex;
     justify-content: center;
@@ -419,75 +364,80 @@
     margin: 25px auto;
     width: 100%;
   }
-  
+
   .bismillah {
     font-family: var(--font-bold);
-    font-size: 25px;
+    font-size: 24px;
     color: var(--color-text-mid);
     white-space: nowrap;
     letter-spacing: 1px;
     padding: 0 20px;
     line-height: 1.2;
+    opacity: 0.8;
   }
-  
+
   .salam {
     font-family: var(--font-reg);
-    font-size: 16px;
-    color: var(--color-text-mid);
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    color: var(--color-text-muted);
     text-align: center;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    text-transform: uppercase;
   }
-  
+
   .parents {
-    font-family: var(--font-reg);
-    font-size: 18px;
-    color: var(--color-text-dark);
+    font-family: var(--font-display);
+    font-size: 17px;
+    color: #171717;
     text-align: center;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    line-height: 1.8;
+    margin-bottom: 32px;
   }
-  
+
   .invitation-text {
     font-family: var(--font-serif);
-    font-size: 16px;
+    font-size: 14px;
     color: var(--color-text-mid);
     text-align: center;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+    letter-spacing: 0.02em;
   }
-  
+
   .bride-groom {
     font-family: var(--font-display);
     text-align: center;
-    margin-top: 20px;
+    margin-top: 24px;
     margin-bottom: 20px;
     width: 350px;
   }
-  
+
   .groom-name,
   .bride-name {
     font-family: var(--font-display);
-    font-size: 25px;
+    font-size: 22px;
     color: var(--color-text-dark);
-    letter-spacing: 0.1em;
-    margin-bottom: 10px;
+    letter-spacing: 0.12em;
+    margin-bottom: 0;
+    font-weight: 400;
   }
 
   .couple-connector {
     font-family: var(--font-serif);
     font-style: italic;
-    font-size: 16px;
-    color: var(--color-text-mid);
-    margin: 10px 0;
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin: 12px 0;
   }
-  
-  
+
+
   /* ============================================================
      7. LOCATION SECTION
      ============================================================ */
   .location-section {
-    background-color: transparent;
+    background-color: var(--color-bg-card);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -496,37 +446,38 @@
     min-height: 200px;
     text-align: center;
   }
-  
+
   .location-item {
     margin-bottom: 2rem;
     width: 100%;
     max-width: 316px;
   }
-  
+
   .location-label {
-    font-family: var(--font-bold);
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 15px;
-    color: var(--color-text-dark);
-    margin-bottom: 0.5rem;
-  }
-  
-  .location-detail {
     font-family: var(--font-reg);
-    font-size: 16px;
-    line-height: 19px;
-    color: var(--color-text-mid);
+    font-weight: 400;
+    font-size: 9px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 0.6rem;
+  }
+
+  .location-detail {
+    font-family: var(--font-display);
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--color-text-dark);
     margin: 0 auto;
     max-width: 261px;
   }
-  
+
   @media (max-width: 400px) {
     .location-section { padding: 1.5rem; }
     .location-item    { margin-bottom: 1.5rem; }
   }
-  
-  
+
+
   /* ============================================================
      8. ATURCARA & QUOTES SECTION
      ============================================================ */
@@ -538,66 +489,70 @@
     padding: 2rem;
     min-height: 760px;
   }
-  
-  /* Shared glass card — aturcara & doa on pattern-bg */
+
+  /* Shared glass card — used by both aturcara and quotes */
   .aturcara-card,
   .quotes-card {
     position: relative;
     width: 315px;
     min-height: 223px;
-    background: var(--color-bg-card-glass-pattern);
-    border: 2px solid rgba(123, 94, 167, 0.45);
+    background: var(--color-bg-card-glass);
+    border: 1px solid var(--color-gold-border);
     border-radius: var(--radius-card);
-    padding: 50px 15px;
+    padding: 48px 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 12px 40px rgba(74, 50, 90, 0.12);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
   }
-  
+
   .aturcara-card {
-    box-shadow: var(--shadow-inner), 0 12px 40px rgba(74, 50, 90, 0.1);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
   }
-  
+
   @supports not (backdrop-filter: blur(21px)) {
     .aturcara-card,
     .quotes-card {
-      background: rgba(255, 252, 248, 0.97);
-      box-shadow: 0 8px 24px rgba(74, 50, 90, 0.14);
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
     }
   }
-  
+
   /* Aturcara content */
   .aturcara-title {
-    font-family: var(--font-bold);
-    font-size: 16px;
+    font-family: var(--font-reg);
+    font-size: 9px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
     text-align: center;
-    color: var(--color-text-dark);
-    margin-bottom: 25px;
+    color: var(--color-text-muted);
+    margin-bottom: 28px;
   }
-  
+
   .aturcara-item {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
-  
+
   .aturcara-event {
-    font-family: var(--font-serif);
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-weight: 400;
     font-size: 16px;
     color: var(--color-text-dark);
-    margin-bottom: 5px;
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
   }
-  
+
   .aturcara-time {
-    font-family: var(--font-serif);
-    font-size: 15px;
-    color: var(--color-text-mid);
+    font-family: var(--font-reg);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
   }
-  
+
   /* Quotes content */
   .quotes-container {
     width: 100%;
@@ -607,7 +562,7 @@
     padding: 20px;
     margin: 30px 0;
   }
-  
+
   .quotes-text {
     font-family: var(--font-reg);
     font-size: 13px;
@@ -617,11 +572,11 @@
     width: 285px;
     margin: 0 auto;
   }
-  
+
   .quotes-text:first-child {
     margin-bottom: 20px;
   }
-  
+
   /* Responsive */
   @media (max-width: 400px) {
     .aturcara-card {
@@ -629,15 +584,15 @@
       height: 300px;
       padding: 25px;
     }
-  
+
     .aturcara-title  { margin-bottom: 30px; }
     .aturcara-item   { margin-bottom: 25px; }
-  
+
     .quotes-card     { width: 290px; padding: 40px 15px; }
     .quotes-text     { width: 260px; font-size: 12px; }
   }
-  
-  
+
+
   /* ============================================================
      9. UCAPAN SECTION
      ============================================================ */
@@ -649,15 +604,15 @@
     padding: 3rem 2rem;
     min-height: 400px;
   }
-  
+
   .ucapan-card {
     width: 100%;
-    background: var(--color-bg-card-glass);
+    background: var(--color-bg-popup);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: var(--radius-card);
-    border: 2px solid rgba(123, 94, 167, 0.35);
-    box-shadow: 0 8px 28px rgba(74, 50, 90, 0.1);
+    border: 1px solid var(--color-gold-border);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
     padding: 2rem;
     text-align: center;
     display: flex;
@@ -665,27 +620,32 @@
     max-height: 300px;
     overflow-y: auto;
   }
-  
+
   .ucapan-heading {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--color-text-dark);
-    margin-bottom: 10px;
+    font-family: var(--font-reg);
+    font-size: 9px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    margin-bottom: 14px;
   }
-  
+
   .ucapan-card h2 {
-    font-family: var(--font-bold);
-    font-size: 18px;
-    color: var(--color-text-dark);
+    font-family: var(--font-reg);
+    font-size: 9px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
     margin: 0 0 1rem 0;
   }
-  
+
   .ucapan-list-container {
     flex-grow: 1;
     overflow-y: auto;
     padding-right: 5px;
   }
-  
+
   .ucapan-buttons {
     width: 380px;
     display: flex;
@@ -695,39 +655,42 @@
     flex-wrap: wrap;
     margin-top: 1rem;
   }
-  
+
   .ucapan-button {
     flex: 1 1 45%;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 24px;
-    height: 48px;
-    border: 1px solid var(--color-gold);
+    padding: 14px 20px;
+    height: 44px;
+    border: 1px solid var(--color-gold-border);
     border-radius: var(--radius-btn);
     font-family: var(--font-reg);
-    font-size: 14px;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
     color: var(--color-text-mid);
     background: transparent;
     cursor: pointer;
-    transition: background var(--transition-base);
+    transition: background var(--transition-base), border-color var(--transition-base);
     -webkit-appearance: none;
     appearance: none;
   }
-  
+
   .ucapan-button:hover {
     background-color: var(--color-hover);
+    border-color: #c0b8ac;
   }
-  
+
   @media (max-width: 500px) {
     .ucapan-sections  { padding: 2rem 1.5rem; }
     .ucapan-card      { padding: 1.5rem; }
     .ucapan-buttons   { flex-direction: column; align-items: center; }
     .ucapan-button    { flex: 1 1 100%; max-width: 250px; width: 100%; }
   }
-  
-  
+
+
   /* ============================================================
      10. BOTTOM NAV
      ============================================================ */
@@ -738,16 +701,16 @@
     max-width: var(--max-width);
     height: var(--navbar-height);
     background: var(--color-bg-navbar);
-    -webkit-backdrop-filter: blur(70px);
-    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid var(--color-gold);
-    box-shadow: 0 -4px 12px rgba(123, 94, 167, 0.1);
+    border-top: 1px solid var(--color-gold-border);
+    box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.04);
     z-index: 1000;
   }
-  
+
   /* Reset browser default button styles on nav triggers */
   .bottom-nav .popup-trigger {
     background: none;
@@ -762,65 +725,69 @@
     -webkit-appearance: none;
     appearance: none;
   }
-  
+
   .bottom-nav .popup-trigger:active {
     transform: scale(0.9);
   }
-  
+
   .bottom-nav img {
     display: block;
     width: 20px;
     height: 20px;
   }
-  
-  
+
+
   /* ============================================================
      11. POPUP CARDS
      ============================================================ */
   .popup-card {
     position: fixed;
-    bottom: calc(var(--navbar-height) + 15px);
+    bottom: calc(var(--navbar-height) + 12px);
     left: 50%;
     transform: translateX(-50%) translateY(20px);
     width: calc(100% - 30px);
     max-width: 430px;
     background: var(--color-bg-popup);
-    -webkit-backdrop-filter: blur(70px);
-    backdrop-filter: blur(70px);
-    padding: 1.5rem;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    padding: 1.75rem;
     border-radius: var(--radius-popup);
     box-shadow: var(--shadow-popup);
-    border: 1px solid rgba(123, 94, 167, 0.2);
+    border: 1px solid var(--color-gold-border);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transition: var(--transition-popup);
     z-index: 1001;
   }
-  
+
   .popup-card.active {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
-  
+
   .popup-content {
     text-align: center;
   }
-  
+
   .popup-content h3 {
-    font-family: var(--font-bold);
-    color: var(--color-text-dark);
+    font-family: var(--font-reg);
+    font-size: 9px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--color-text-muted);
     margin-bottom: 1rem;
   }
-  
+
   .popup-content p {
     font-family: var(--font-reg);
     color: var(--color-text-mid);
     margin: 0.5rem 0;
   }
-  
+
   /* Shared button style used in popups and forms */
   .popup-button,
   .rsvp-form button {
@@ -828,31 +795,33 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 24px;
-    min-width: 151px;
-    height: 48px;
-    border: 1px solid var(--color-gold);
+    padding: 12px 24px;
+    min-width: 140px;
+    height: 44px;
+    border: 1px solid var(--color-gold-border);
     border-radius: var(--radius-btn);
     font-family: var(--font-reg);
-    font-size: 14px;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
     color: var(--color-text-mid);
     background: transparent;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    letter-spacing: -0.002em;
-    transition: background var(--transition-base);
+    transition: background var(--transition-base), border-color var(--transition-base);
     -webkit-appearance: none;
     appearance: none;
     position: relative;
-    margin: 20px auto;
+    margin: 16px auto;
   }
-  
+
   .popup-button:hover,
   .rsvp-form button:hover {
     background-color: var(--color-hover);
+    border-color: #c0b8ac;
   }
-  
+
   .close-btn {
     position: absolute;
     top: 10px;
@@ -864,8 +833,8 @@
     cursor: pointer;
     line-height: 1;
   }
-  
-  
+
+
   /* ============================================================
      12. RSVP FORMS
      ============================================================ */
@@ -875,38 +844,50 @@
     gap: 12px;
     margin-top: 15px;
   }
-  
+
   .rsvp-form input,
   .rsvp-form select,
   .rsvp-form textarea {
     padding: 10px 12px;
     border-radius: var(--radius-input);
     border: 1px solid var(--color-input-border);
-    font-size: 16px;
+    font-size: 14px;
+    font-family: var(--font-reg);
     width: 100%;
     box-sizing: border-box;
+    background: var(--color-bg-card);
+    color: var(--color-text-dark);
+    outline: none;
+    transition: border-color var(--transition-fast);
   }
-  
-  .rsvp-form textarea {
-    resize: vertical;
+
+  .rsvp-form input:focus,
+  .rsvp-form select:focus,
+  .rsvp-form textarea:focus {
+    border-color: #a09888;
   }
-  
+
   .rsvp-form label {
-    font-weight: 500;
+    font-family: var(--font-reg);
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--color-text-muted);
     text-align: left;
   }
-  
+
   .form-buttons {
     display: flex;
     gap: 10px;
     margin-top: 15px;
   }
-  
+
   .form-buttons button {
     flex: 1;
   }
-  
-  
+
+
   /* ============================================================
      13. REVEAL OVERLAY
      ============================================================ */
@@ -927,12 +908,12 @@
     overflow: hidden;
     transition: opacity 1s ease, visibility 1s ease;
   }
-  
+
   .reveal-overlay.hidden {
     opacity: 0;
     visibility: hidden;
   }
-  
+
   .reveal-doors-wrapper {
     position: absolute;
     top: 0;
@@ -944,7 +925,7 @@
     z-index: 2;
     pointer-events: none;
   }
-  
+
   .reveal-left,
   .reveal-right {
     position: absolute;
@@ -956,13 +937,13 @@
     backdrop-filter: blur(10px);
     transition: transform var(--transition-door);
   }
-  
+
   .reveal-left  { left: 0; transform: translateX(0); }
   .reveal-right { right: 0; transform: translateX(0); }
-  
+
   .reveal-overlay.open .reveal-left  { transform: translateX(-100%); }
   .reveal-overlay.open .reveal-right { transform: translateX(100%); }
-  
+
   .reveal-content {
     animation: bounceLoop 2s ease-in-out infinite;
     position: absolute;
@@ -970,13 +951,13 @@
     height: 206px;
     left: calc(50% - 102.5px);
     top: 263px;
-    background: var(--color-bg-reveal);
-    border: 2px solid #9B7EBD;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-gold-border);
     border-radius: 50%;
-    box-shadow: 2px 4px 7.1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     z-index: 3;
   }
-  
+
   /* Names inside the reveal circle */
   .reveal-content .name-idris,
   .reveal-content .ampersand,
@@ -984,17 +965,18 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-family: var(--font-serif);
-    color: #7B5EA7;
+    font-family: var(--font-display);
+    color: var(--color-text-dark);
     text-align: center;
-    text-shadow: var(--shadow-text);
+    text-shadow: none;
     z-index: 1;
+    font-weight: 400;
   }
-  
+
   .reveal-content .name-idris  { top: 10px;  font-size: 35px; line-height: 77px; }
   .reveal-content .ampersand   { top: 65px;  font-size: 32px; }
   .reveal-content .name-aqilah { top: 80px;  font-size: 35px; line-height: 77px; }
-  
+
   .reveal-content .buka {
     position: absolute;
     top: 160px;
@@ -1009,8 +991,8 @@
     text-shadow: 1px 2px 2.8px rgba(0, 0, 0, 0.25);
     z-index: 2;
   }
-  
-  
+
+
   /* ============================================================
      14. UCAPAN MESSAGES
      ============================================================ */
@@ -1021,14 +1003,14 @@
     background-color: var(--color-bg-ucapan);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
+
   .ucapan-text {
     font-family: var(--font-reg);
     font-style: italic;
     color: var(--color-text-light);
     margin-bottom: 0.5rem;
   }
-  
+
   .ucapan-name {
     font-family: var(--font-bold);
     text-align: center;
@@ -1036,34 +1018,47 @@
     margin: 0;
     padding-bottom: 10px;
   }
-  
-  
+
+
   /* ============================================================
      15. CONTACT ENTRIES
      ============================================================ */
+  .popup-content--contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .popup-content--contacts > h3 {
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
   .contact-entry {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
-  
+
   .contact-name {
     font-size: 16px;
     color: var(--color-text-dark);
   }
-  
+
   .contact-icons {
     display: flex;
     gap: 8px;
   }
-  
+
   .contact-icons a img {
     width: 24px;
     height: 24px;
   }
-  
-  
+
+
   /* ============================================================
      16. ANIMATIONS & TRANSITIONS
      ============================================================ */
@@ -1072,12 +1067,12 @@
     transform: translateY(20px);
     transition: var(--transition-fade);
   }
-  
+
   .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   @keyframes bounceLoop {
     0%, 100% { transform: translateY(0); }
     50%       { transform: translateY(-10px); }
