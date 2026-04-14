@@ -228,175 +228,165 @@
   /* ============================================================
      5. WELCOME SECTION
      ============================================================ */
-  .welcome-section {
-    aspect-ratio: 9 / 16;
-    width: 100%;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    background-image: url('assets/background/bg-mobile.svg');
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 0;
-  }
+     .welcome-section {
+      aspect-ratio: 9 / 16;
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background-image: url('assets/background/main-bg.svg');
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      position: relative;
+      padding: 0;
+    }
+    
+    .welcome-section .content {
+      width: 100%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      padding: 0 9% 10% 9%;
+      box-sizing: border-box;
+    }
+    
+    /* Arabic calligraphy image — top left */
+    .walimatulurus {
+      all: initial;
+      display: block;
+      width: 42%;
+      max-width: 160px;
+      height: auto;
+      margin: 0 0 8px 0;
+    }
   
-  .welcome-section .content {
-    width: 72%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    padding: 0;
-    margin-top: -8%;
-  }
+    /* "WALIMATULURUS" label */
+    .title {
+      font-family: var(--font-reg);
+      font-size: 9px;
+      letter-spacing: 0.38em;
+      color: var(--color-text-mid);
+      margin: 0 0 28px 19px;
+      text-transform: uppercase;
+      display: block;
+      text-align: left;
+    }
+    
+    /* Y / N monogram — hidden, not needed in new layout */
+    .monogram {
+      display: none;
+    }
+    
+    /* Names — big, left-aligned, stacked */
+    .names {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      margin: 0 0 28px 0;
+    }
+    
+    /* Keep "dan Nadia" on the same line */
+    .and-line {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
   
-  /* Y / N monogram */
-  .monogram {
-    font-family: var(--font-display);
-    font-size: 18px;
-    letter-spacing: 0.45em;
-    color: var(--color-text-muted);
-    margin: 0 0 14px;
-    font-style: italic;
-    font-weight: 400;
-  }
-  
-  /* Arabic calligraphy image */
-  .walimatulurus {
-    all: initial;
-    display: block;
-    width: 48%;
-    max-width: 180px;
-    height: auto;
-    margin: 0 auto 8px;
-    opacity: 0.82;
-  }
-  
-  /* "WALIMATULURUS" label */
-  .title {
-    font-family: var(--font-reg);
-    font-size: 8px;
-    letter-spacing: 0.55em;
-    color: var(--color-text-muted);
-    margin: 6px 0 22px;
-    text-transform: uppercase;
-  }
-  
-  /* Names — stacked vertically, centred */
-  .names {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    margin: 0 0 22px;
-  }
-  
-  .name {
-    font-family: var(--font-display);
-    font-size: clamp(34px, 11vw, 36px);
-    line-height: 1.05;
-    color: var(--color-text-dark);
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    margin: 0;
-    display: block;
-    font-weight: 400;
-  }
-  
-  .and {
-    font-family: var(--font-cursive);
-    font-size: clamp(17px, 4.5vw, 19px);
-    font-style: italic;
-    color: var(--color-text-muted);
-    margin: 4px 0;
-    line-height: 1.4;
-    display: block;
-  }
-  
-  /* Date / venue lines */
-  .date {
-    font-family: var(--font-display);
-    font-size: clamp(9px, 2.5vw, 11px);
-    letter-spacing: 0.38em;
-    color: var(--color-text-mid);
-    text-transform: uppercase;
-    margin: 0;
-    line-height: 2;
-    display: block;
-  }
-  
-  /* Add a gap between names block and date lines */
-  .names + .date {
-    margin-top: 14px;
-  }
-  
-  /* Save the Date label */
-  .save-the-date-label {
-    font-family: var(--font-cursive);
-    font-size: clamp(13px, 3.5vw, 15px);
-    font-style: italic;
-    color: var(--color-text-muted);
-    letter-spacing: 0.06em;
-    margin: 0 0 16px;
-    display: block;
-  }
-  
-  /* Date block (20 | Ahad / Jun / 11 AM) */
-  .date-block {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin: 0 0 18px;
-  }
-  
-  .date-day-number {
-    font-family: var(--font-display);
-    font-size: clamp(38px, 12vw, 44px);
-    color: var(--color-text-dark);
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: -0.01em;
-  }
-  
-  .date-divider {
-    width: 1px;
-    height: 40px;
-    background: var(--color-gold-border);
-    flex-shrink: 0;
-  }
-  
-  .date-detail-stack {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1px;
-  }
-  
-  .date-detail-line {
-    font-family: var(--font-reg);
-    font-size: 9px;
-    letter-spacing: 0.38em;
-    text-transform: uppercase;
-    color: var(--color-text-mid);
-    line-height: 1.7;
-  }
-  
-  /* Venue lines */
-  .venue-line {
-    font-family: var(--font-display);
-    font-size: clamp(10px, 2.8vw, 12px);
-    letter-spacing: 0.2em;
-    color: var(--color-text-mid);
-    line-height: 1.7;
-    display: block;
-  }
-  
+    .name {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 16vw, 72px);
+      line-height: 0.95;
+      color: #7B5EA7;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 0;
+      display: block;
+    }
+    
+    .and {
+      font-family: var(--font-cursive);
+      font-size: clamp(13px, 3.5vw, 16px);
+      font-style: normal;
+      color: var(--color-text-mid);
+      letter-spacing: 0.18em;
+      text-transform: lowercase;
+      margin: 0;
+      line-height: 1.2;
+      display: block;
+    }
+    
+    /* Save the date block */
+    .save-the-date-label {
+      font-family: var(--font-reg);
+      font-size: 9px;
+      letter-spacing: 0.38em;
+      color: var(--color-text-mid);
+      text-transform: uppercase;
+      margin: 0 0 12px 0;
+      display: block;
+    }
+    
+    .date-block {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 0 0 10px 0;
+    }
+    
+    .date-day-number {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 12vw, 56px);
+      line-height: 1;
+      color: var(--color-text-dark);
+      letter-spacing: -0.02em;
+    }
+    
+    .date-divider {
+      width: 1px;
+      height: 54px;
+      background: var(--color-text-mid);
+      opacity: 0.5;
+      flex-shrink: 0;
+    }
+    
+    .date-detail-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    
+    .date-detail-line {
+      font-family: var(--font-bold);
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      color: var(--color-text-dark);
+      text-transform: uppercase;
+      display: block;
+    }
+    
+    /* Venue line */
+    .venue-line {
+      font-family: var(--font-reg);
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      color: var(--color-text-mid);
+      text-transform: uppercase;
+      margin: 0;
+      display: block;
+      line-height: 1.8;
+    }
+    
+    /* Legacy .date — hidden in new layout */
+    .date {
+      display: none;
+    }
   
   /* ============================================================
      6. INVITATION SECTION
