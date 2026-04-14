@@ -40,7 +40,7 @@
     --color-bg-card:       #faf8fd;   /* main card */
     --color-bg-ucapan:     #3b2f4a;   /* message bubbles — deep purple */
     --color-bg-popup:      rgba(250, 248, 253, 0.88);  /* popup */
-    --color-bg-navbar:     rgba(250, 248, 253, 0.92);  /* bottom nav */
+    --color-bg-navbar:     #faf7f4;  /* bottom nav */
     --color-bg-reveal:     #faf8fd;   /* reveal door */
     --color-bg-card-glass: rgba(250, 248, 253, 0.65);  /* aturcara/quotes */
   
@@ -488,7 +488,7 @@
      7. LOCATION SECTION
      ============================================================ */
   .location-section {
-    background-color: var(--color-bg-card);
+    background-color: #faf7f4;
     display: flex;
     flex-direction: column;
     align-items: center;
