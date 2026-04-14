@@ -190,7 +190,7 @@
   }
   
   /* Per-section background images */
-  .welcome-section  { background-image: url('assets/background/YusufNadia Backgrouund.svg'); }
+  .welcome-section  { background-image: url('assets/background/main-bg.svg'); }
   .invite-section   { background-image: url('assets/background/plain-bg.svg'); }
   .aturcara-section { background-image: url('assets/background/pattern-bg.svg'); }
   .quotes-section   { background-image: url('assets/background/plain-bg.svg'); }
