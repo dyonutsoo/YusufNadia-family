@@ -1017,7 +1017,7 @@
     left: 50%;
     transform: translateX(-50%);
     font-family: var(--font-display);
-    color: var(--color-text-dark);
+    color: var(--color-text-mid);
     text-align: center;
     text-shadow: none;
     z-index: 1;
